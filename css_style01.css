@@ -2,7 +2,7 @@ body,html{background:var(--secondary); scrollbar-color:var(--light) var(--dark);
 
 a, a:hover, a:visited, a:focus {text-decoration:none;}
 
-.CML_font {font-family:&#39;Oregano&#39;,cursive;font-weight:400;font-style:normal;}
+.CML_font {font-family:'Oregano',cursive;font-weight:400;font-style:normal;}
 
 .spinner {display:none; opacity:0; width:50px; height:50px; border:6px solid var(--dark); border-top:6px solid var(--light);
 border-radius:50%; animation:spin 1s linear infinite; position:absolute; z-index:3;}
@@ -153,5 +153,6 @@ h3.post-title {padding:0 0 30px 0; margin:0; text-align:center;}
 .btn-linkedin{background:#0077b5;}
 .btn-telegram{background:#0088cc;}
 .btn-discord{background:#7289da;}
+
 
 .btn-copy{background:#6c757d;}
