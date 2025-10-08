@@ -17,19 +17,28 @@ function agregarBotonesTTS() {
     contenedor.style.textAlign = 'center';
     contenedor.style.marginBottom = '10px';
 
+    // Botón principal
     const btn = document.createElement('button');
     btn.className = 'btn btn-primary btn-sm tts-button';
     btn.innerHTML = '<i class="bi bi-play-fill"></i> Leer en voz alta';
     btn.onclick = () => toggleLectura(post, btn);
 
+    // Botón de ayuda
+    const ayuda = document.createElement('button');
+    ayuda.className = 'btn btn-outline-secondary btn-sm ms-2';
+    ayuda.innerHTML = '?';
+    ayuda.setAttribute('data-bs-toggle', 'modal');
+    ayuda.setAttribute('data-bs-target', '#modalVoces');
+
     contenedor.appendChild(btn);
+    contenedor.appendChild(ayuda);
     post.insertBefore(contenedor, post.firstChild);
   });
 }
 
 function toggleLectura(postElement, btn) {
   if (!ttsActiva) {
-    btn.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Cargando…';
+    btn.innerHTML = '<i class="bi bi-arrow-clockwise tts-loading-icon"></i> Cargando…';
     leerPost(postElement, btn);
   } else {
     detenerLectura(postElement, btn);
